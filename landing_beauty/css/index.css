@@ -1,0 +1,396 @@
+/* common */
+.main_vis, #about, #skill{
+    overflow: hidden;
+}
+
+/* main_vis */
+.main_vis{
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+}
+.main_vis .area_top{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+.main_vis .img_wrap{
+    position: fixed;
+    top: 50%;left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    /* width: 50%;height: 40%; */
+    width: 100%;height: 100%;
+
+    overflow: hidden;
+    background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/71f455124628029.610843b275816.jpg);
+background-repeat: no-repeat;
+background-size: 100%;
+background-position: center;
+}
+.main_vis .img_wrap::before{
+    content: "";
+    position: absolute;z-index: 1;
+    top: 0;left: 0;
+    width: 100%;height: 100%;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+}
+.main_vis .img_wrap.active{
+    position: absolute;
+}
+.main_vis .img_wrap img{
+    width: 100%;height: 100%;
+    object-fit: cover;
+}
+.main_vis .txt_box1{
+    position: absolute;
+    top: 50%;left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-weight: 600;
+}
+.main_vis .txt_box1 .txt_wrap{
+    display: block;
+    margin-top: 10px;
+}
+.main_vis .txt_box1 .txt_wrap .word{
+    overflow: hidden;
+}
+.main_vis .txt_box1 .txt_wrap .char{
+    /* transform: translateY(100%); */
+    /* opacity: 0; */
+}
+.main_vis .txt_box1 > strong{
+    font-family: 'Roxborough-thin', serif;
+    font-size: 50px;
+}
+.main_vis .txt_box2{
+    opacity: 1;
+    position: fixed;
+    top: 50%;transform: translate(-50%, -50%);
+    left: 50%;
+    text-align: center;
+    white-space: nowrap;
+    font-weight: 600;
+    transition: opacity .5s;
+    font-size: 18px;;
+}
+.main_vis .txt_box2 > strong{
+    font-family: 'Roxborough-thin', serif;
+    font-size: 95px;
+}
+.main_vis .txt_box2 > strong, .main_vis .txt_box2 > span{
+    display: inline-block;
+    width: 23%;
+}
+.main_vis .txt_box2 .txt_wrap .word{
+    overflow: hidden;
+}
+.main_vis .txt_box2 .txt_wrap .char{
+    transform: translateY(100%);
+    opacity: 0;
+}
+.main_vis .area_btm{
+    position: relative;
+    height: 100vh;
+}
+.main_vis .txt_box3{
+    position: absolute;
+    top: 0;
+    left: 5%;
+    font-size: 40px;
+    line-height: 1.5;
+}
+
+/* about */
+#about{
+    background: #fff;
+    position: relative;
+}
+/* #about .inner > div{
+    height: 100vh;
+} */
+#about .about_sc{
+    display: flex;
+    height: 100vh;
+    width: 300vw;
+}
+#about .about_sc > div{
+    height: 100vh;
+    width: 100vw;
+}
+
+#about .about_intro ul{
+    font-size: 150px;
+    font-weight: 500;
+    margin-top: 50px;
+}
+#about .about_intro ul li{transform: translateX(30%);}
+#about .about_intro .txt_box h2{
+    font-family: 'Lora', serif;
+    font-size: 50px;
+    overflow: hidden;
+}
+#about .about_intro .txt_box h2 span{
+    display: block;
+    transform: translateY(100%);
+}
+#about .about_intro .txt_box p{
+    font-size: 30px;
+    margin-top: 30px;
+    line-height: 1.2;
+}
+#about .about_intro .txt_box p span{
+    display: block;
+}
+#about .about_intro .txt_box p span .word{
+    overflow: hidden;
+}
+#about .about_intro .txt_box p span .char{
+    transform: translateY(100%);
+}
+
+#about .about_tit, #about .cnt{
+    position: relative;
+    text-align: center;
+    height: 100vh;
+}
+#about .about_tit > div, #about .cnt > div{
+    position: absolute;
+    top: 50%;left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+#about .about_tit h3{
+    font-family: 'Lora', serif;
+    font-size: 80px;
+}
+#about .about_tit h3 .word{
+    overflow: hidden;
+}
+#about .about_tit h3 .char{
+    transform: translateY(100%);
+}
+#about .about_tit p{
+    font-size: 20px;
+    padding-top: 20px;
+}
+#about .about_tit p span{
+    display: block;
+}
+#about .cnt strong{
+    display: block;
+    font-size: 120px;
+    font-weight: 600;
+    -webkit-text-stroke-width: 2px;
+    color: transparent;
+    -webkit-text-stroke-color: #fff;
+    font-family: 'Lora', serif;
+}
+#about .cnt p{
+    font-size: 28px;
+    padding-top: 20px;
+    line-height: 1.5;
+    color: #fff;
+}
+#about .cnt p span{
+    display: block;
+}
+#about .cnt .img_wrap{
+    position: absolute;
+    top: 50%;left: 50%;
+    transform: translate(-50%, -50%);
+}
+#about .about_sc .cnt{
+    position: relative;
+}
+#about .about_sc .cnt::after{
+    content: "";
+    position: absolute;
+    top: 0;left: 0;right: 0;bottom: 0;
+    background: rgba(0,0,0,0.4);
+}
+#about .person_cnt1{
+    background-image:url(../images/main/cheerful_img.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 center;
+    background-size: 120%;
+}
+
+#about .person_cnt2{
+    background-image:url(../images/main/creative_img.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 center;
+    background-size: 120%;
+}
+
+#about .hobby{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+#about .hobby .panel{
+    position: absolute;
+    bottom: 0;
+    left: 0;width: 100%;
+    height: 0;
+}
+ #about .hobby .hiking{
+     height: 100%;
+    background: url("../images/main/hiking.jpg") no-repeat center / cover;
+}
+#about .hobby .cycling{
+    background: url("../images/main/cycling.jpg") no-repeat center / cover;
+}
+#about .hobby .swimming{
+    background: url("../images/main/swimming.jpg") no-repeat center / cover;
+}
+#about .hobby .img_wrap{
+    width: 100%;height: 100%;
+}
+#about .hobby .img_wrap img{
+    width: 100%;height: 100%;
+    object-fit: cover;
+}
+#about .hobby .hobby_txt_box{
+    position: absolute;
+    top: 50%;
+    left: 50%;;
+    color: #fff;
+    font-size: 70px;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    font-weight: 600;
+    height: 100px;
+    overflow: hidden;
+}
+#about .hobby .hobby_txt_box p{}
+#about .hobby .hobby_txt_box span{display: block;    line-height: 100px;}
+
+
+/* portfolio */
+#portfolio{
+    color: #000;
+    transition: background .3s;
+    padding: 100px 0;
+}
+#portfolio.on{
+    background: #000;
+    color: #fff;
+}
+#portfolio .tit_box{
+    position: relative;
+    height: 100vh;
+}
+#portfolio .tit_box h2{
+    font-family: 'Lora', serif;
+    position: absolute;
+    top: 50%;left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 13vw;
+    font-weight: 600;
+    text-align: center;
+}
+#portfolio.on .tit_box h2{
+    color: #fff;
+}
+#portfolio .tit_box h2.active{
+    position: fixed;
+}
+#portfolio .btn_more{
+    border-color: #fff;
+}
+
+#portfolio .pf_content{
+    padding: 0 50px;
+}
+#portfolio .pf_content .sticky{
+    position: relative;
+    margin-bottom: 100px;
+}
+#portfolio .pf_content .sticky::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+#portfolio .pf_content .sticky .text_wrapper{
+    position: sticky;
+    top: 80px;
+    width: 50%;
+    height: 100vh;
+    float: left;
+    display: block;
+}
+#portfolio .pf_content .sticky .img_wrapper{
+    width: 50%;
+    float: right;
+}
+#portfolio .pf_content .sticky .img_wrapper img{
+    width: 100%;
+    object-fit: cover;
+}
+
+#portfolio .pf_content em{
+    color: #666;
+}
+#portfolio .tit{
+    font-family: 'Lora', serif;
+    font-size: 50px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+#portfolio .tit span{
+    display: block;
+    transform: translateY(100%);
+    opacity: 0;
+}
+#portfolio .desc{
+    font-size: 30px;
+    margin-top: 30px;
+    line-height: 1.5;
+}
+#portfolio .desc span{
+    display: block;
+}
+#portfolio .desc .version{
+    font-size: 20px;
+}
+#portfolio .desc span .word{
+    overflow: hidden;
+}
+#portfolio .desc span .char{
+    transform: translateY(100%);
+}
+
+
+/* skill */
+#skill{
+    padding-top: 100px;
+}
+#skill .tit_box{
+    font-family: 'Lora', serif;
+    font-size: 80px;
+}
+#skill .tit_box h2 span{
+    display: block;
+}
+#skill .tit_box h2 .txt_skill{
+    margin-top: 30px;
+    margin-left: 170px;
+}
+#skill .img_box{
+    float: right;
+    display: flex;
+}
+#skill .img_box img{
+    display: block;
+    width: 300px;
+    padding-bottom: 70px;
+}
+#skill .img_box .java{
+    width: 210px;
+    margin-left: 45px;
+}
+#skill .img_box .design{
+    margin-top: 100px;
+    margin-left: 100px;
+}

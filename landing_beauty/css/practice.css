@@ -1,0 +1,43 @@
+#portfolio{
+    display: block;
+    /* overflow: hidden; */
+    color: #000;
+    transition: background .3s;
+    padding: 100px 0;
+}
+#portfolio .tit_box{
+    height: 100vh;
+}
+#portfolio .tit_box h2{
+    font-family: 'Lora', serif;
+    position: absolute;
+    top: 50%;left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 13vw;
+    font-weight: 600;
+    text-align: center;
+}
+.pf_content .lotte{
+    position: relative;
+}
+.pf_content .lotte::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+.pf_content .lotte .text_wrapper{
+    position: sticky;
+    top: 0;
+    width: 50%;
+    height: 100vh;
+    float: left;
+    display: block;
+}
+.pf_content .lotte .img_wrapper{
+    width: 50%;
+    float: right;
+}
+.pf_content .lotte .img_wrapper .img_wrap img{
+    width: 100%;
+    object-fit: cover;
+}

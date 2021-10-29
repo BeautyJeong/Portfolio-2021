@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty's portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/stickyfill.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script> <!-- ScrollTrigger -->
+    <script src="https://unpkg.com/split-type@0.2.5/umd/index.min.js"></script><!-- SplitType 글자 하나씩 효과주기, 무료버전 -->
+
+    <script src="js/main.js"></script>
+    <script src="js/common.js"></script>
+</head>
+<body>
+    <div id="skip">
+        <a href="">본문 바로가기</a>
+    </div>
+    <span id="cursor"></span>
+
+    <div class="wrap">
+        <header id="header">
+            <div>
+                <h1 class="logo">
+                    <a href=""><span>BEAUTY's</span> PORTFOLIO</a>
+                </h1>
+                <div class="menu">
+                    <ul>
+                        <li>
+                            <a href="#about">ABOUT</a>
+                        </li>
+                        <li>
+                            <a href="#portfolio">PORTFOLIO</a>
+                        </li>
+                        <li>
+                            <a href="#skill">SKILL</a>
+                        </li>
+                        <li>
+                            <a href="#footer">CONTACT</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <main id="mainCnt">
+            <section class="main_vis">
+                <div class="area_top">
+                    <div class="img_wrap">
+                        <!-- <img src="https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/71f455124628029.610843b275816.jpg" alt=""> -->
+                    </div>
+                    <div class="txt_box1">
+                        <!-- 인사말 -->
+                        <strong class="txt_wrap"><span>I'M</span></strong>
+                        <span class="txt_wrap"><span>안녕하세요</span></span>
+                        <strong class="txt_wrap"><span>BEAUTY</span></strong>
+                        <span class="txt_wrap"><span>정뷰티입니다</span></span>
+                        <strong class="txt_wrap"><span>JEONG</span></strong>
+                    </div>
+                    <div class="txt_box2" aria-hidden="true">
+                        <strong class="txt_wrap"><span>I'M</span></strong>
+                        <span class="txt_wrap"><span>안녕하세요</span></span>
+                        <strong class="txt_wrap"><span>BEAUTY</span></strong>
+                        <span class="txt_wrap"><span>정뷰티입니다</span></span>
+                        <strong class="txt_wrap"><span>JEONG</span></strong>
+                    </div>
+                </div>
+                <div class="area_btm">
+                    <div class="txt_box3">
+                        <p>
+                            퍼블리셔 정뷰티는 <br>
+                            고객들에게 감동과<br>
+                            즐거움을 주기 위해<br>
+                            계속 고민하고 생각합니다.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="about">
+                    <div class="inner">
+                        <div class="about_intro">
+                            <ul>
+                                <li class="txt01">PASSION</li>
+                                <li class="txt02">TENACITY</li>
+                                <li class="txt03">CHALLENGE</li>
+                            </ul>
+                            <div class="txt_box">
+                                <h2 class="tit"><span>Beauty is</span></h2>
+                                <p class="desc">
+                                    <span>저는 열정을 가지고 끈기있게 도전합니다.</span>
+                                    <span>그리고 책임감을 가지고 일합니다.</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 가로스크롤 -->
+                    <div class="about_sc">
+
+                        <div class="about_tit tit1">
+                            <div>
+                                <h3>Personality</h3>
+                                <p><span>정뷰티의 성격을 소개합니다</span></p>
+                            </div>
+                        </div>
+
+                        <div class="person_cnt1 cnt">
+                            <div>
+                                <strong>Cheerful</strong>
+                                <p><span>사람들과 함께 하는 것을 좋아하며</span>
+                                    <span>쾌활하고 밝습니다.</span>
+                                  <span>주변 사람들이 행복할 때 행복함을 느낍니다.</span>
+                                </p>
+                                <!-- fiter: blur(숫자높을수록 블러) 원근감 -->
+                                <!-- <div class="img_wrap img1"><img src="images/main/cheerful_img1.jpg" alt=""></div>
+                                <div class="img_wrap img2"><img src="images/main/cheerful_img2.jpg" alt=""></div> -->
+                            </div>
+                        </div>
+
+                        <div class="person_cnt2 cnt">
+                            <div>
+                                <strong>Creative</strong>
+                                <p><span>창의적입니다. 항상 다른 각도에서 보려고 노력하며,</span>
+                                    <span>새로운 것을 생각하는데 즐거움을 느낍니다.</span>
+                                </p>
+                                <!-- <div class="img_wrap img1"><img src="images/main/creative_img1.jpg" alt=""></div>
+                                <div class="img_wrap img2"><img src="images/main/creative_img2.jpg" alt=""></div>
+                                <div class="img_wrap img3"><img src="images/main/creative_img3.jpg" alt=""></div> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about_tit tit2">
+                        <div>
+                            <h3>Hobby</h3>
+                            <p><span>정뷰티의 취미를 소개합니다</span></p>
+                        </div>
+                    </div>
+                    <div class="hobby">
+                        <div class="hiking panel">
+                           
+                        </div>
+                        <div class="cycling panel">
+                           
+                        </div>
+                        <div class="swimming panel">
+                           
+                        </div>
+
+                        <div class="hobby_txt_box">
+                            <p class="hb_list">
+                                <span class="txt_hik">Hiking</span>
+                                <span class="txt_cyc">Cycling</span>
+                                <span class="txt_swim">Swimming</span>
+                            </p>
+                        </div>
+                    </div>
+            </section>
+
+            <section id="portfolio">
+                <div class="tit_box">
+                    <h2>PORTFOLIO</h2>
+                </div>
+                
+                <div class="pf_content">
+                    <div class="lotte sticky">
+                        <div class="text_wrapper">
+                            <em>PART1.</em>
+                            <h4 class="tit"><span>LOTTE HOTELS</span> <span>& RESORTS</span></h4>
+                            <p class="desc">
+                                <span>새롭게 리뉴얼한 롯데호텔앤리조트를 소개합니다.</span>
+                                <span class="version">*PC버전으로 제작되었습니다.</span>
+                            </p>
+                            <a href="" target="_blank" class="btn_more">view</a>
+                        </div>
+                        <div class="img_wrapper">
+                            <div class="img_wrap"><img src="images/main/portfolio_img1.png" alt=""></div>
+                        </div>
+                    </div>
+                    <div class="dram sticky">
+                        <div class="text_wrapper">
+                            <em>PART2.</em>
+                            <h4 class="tit"><span>Designer Dram</span></h4>
+                            <p class="desc">
+                                <span>기존의 사이트를 클론코딩하여 <br> 동적으로 구현하였습니다.</span>
+                                <span class="version">*모바일 버전으로 제작되었습니다.</span>
+                            </p>
+                            <a href="" target="_blank" class="btn_more">view</a>
+                        </div>
+                        <div class="img_wrapper">
+                            <div class="img_wrap"><img src="images/main/portfolio_img2.png" alt=""></div>
+                        </div>
+                    </div>
+                    <div class="ikea sticky">
+                        <div class="text_wrapper">
+                            <em>PART3.</em>
+                            <h4 class="tit"><span>IKEA</span></h4>
+                            <p class="desc">
+                                <span>새롭게 리뉴얼한 이케아를 소개합니다.</span>
+                                <span class="version">*반응형으로 제작되었습니다.</span>
+                            </p>
+                            <a href="" target="_blank" class="btn_more">view</a>
+                        </div>
+                        <div class="img_wrapper">
+                            <div class="img_wrap"><img src="images/main/portfolio_img3.png" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+        </main>
+
+        <footer id="footer">
+            <div class="ft_logo">
+                <h1 class="logo">
+                    <a href=""><span>BEAUTY's</span> PORTFOLIO</a>
+                </h1>
+                <p>Copyright© 2021 Beauty_Jeong. All rights reserved</p>
+            </div>
+            <div class="contact">
+                <ul>
+                    <li><a href="github.com/BeautyJeong">Github</a></li>
+                    <li><a href="mailto: wjdqbxl@gmail.com">E-mail</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
