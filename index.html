@@ -14,8 +14,8 @@
     <script src="js/jquery-1.12.4.min.js"></script>
     <script src="js/stickyfill.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script> <!-- ScrollTrigger -->
-    <script src="https://unpkg.com/split-type@0.2.5/umd/index.min.js"></script><!-- SplitType 글자 하나씩 효과주기, 무료버전 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/split-type@0.2.5/umd/index.min.js"></script>
 
     <script src="js/main.js"></script>
     <script src="js/common.js"></script>
@@ -25,6 +25,10 @@
         <a href="">본문 바로가기</a>
     </div>
     <span id="cursor"></span>
+
+    <div class="pc_version">
+        <p>PC버전으로 1440화면까지 지원합니다<span class="notice">&ast;반응형은 제작중이니 조금만 기다려주세요!</span></p>
+    </div>
 
     <div class="wrap">
         <header id="header">
@@ -217,7 +221,7 @@
                 <h1 class="logo">
                     <a href=""><span>BEAUTY's</span> PORTFOLIO</a>
                 </h1>
-                <p>Copyright© 2021 Beauty_Jeong. All rights reserved</p>
+                <p>Copyright&copy; <span id="year"></span> Beauty_Jeong. All rights reserved</p>
             </div>
             <div class="contact">
                 <ul>

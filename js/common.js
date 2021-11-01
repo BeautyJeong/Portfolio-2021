@@ -22,4 +22,32 @@ $(document).ready(function () {
         $('html, body').stop().animate({scrollTop: $($(this).attr('href')).offset().top}, 400, 'swing');
       });
 
+    //pc버전 안내화면 (1440)
+    const wrapHei = $(window).height();
+    //console.log(wrapHei);
+
+    if ($(window).width() < 1440) {
+        $('.pc_version').addClass('on');
+        $('html, body').css({height: wrapHei, overflow: 'hidden'});
+        $('.wrap').css({visibility: 'hidden', height: 0});
+    } 
+
+    $(window).on('resize', function () {    
+        if ($(window).width() < 1440) {
+            $('.pc_version').addClass('on');
+            $('html, body').css({height: wrapHei, overflow: 'hidden'});
+            $('.wrap').css({visibility: 'hidden', height: 0});
+        } else {
+            $('.pc_version').removeClass('on');
+            $('html, body').removeAttr('style');
+            $('.wrap').css({visibility: 'visible', height: 'auto'});
+        }
+    });
+
+    //copyright 연도 자동 업뎃
+    const now = new Date();
+    const ty = now.getFullYear();
+    const year = document.getElementById('year');
+    year.innerHTML = ty;
+
 });
